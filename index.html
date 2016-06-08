@@ -14,6 +14,7 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+          {{ post.content | strip_html | truncatewords: 50 }}
       </li>
     {% endfor %}
   </ul>
@@ -21,3 +22,6 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+
+<script src="/scripts/jquery-2.2.4.min.js"></script>
+<script src="/scripts/test.js"></script>
